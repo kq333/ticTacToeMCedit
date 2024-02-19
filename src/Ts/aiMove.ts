@@ -1,12 +1,13 @@
-import { setNextTurnUser } from './userMove.ts';
-import { isAiWin } from './isAiWin.ts';
-import { userWinTheTure } from './isUserWin.ts';
+import { setNextTurnUser } from './userMove.ts'
+import { isAiWin } from './isAiWin.ts'
+import { userWinTheTure } from './isUserWin.ts'
+import { aiDrawCharacter } from './characterDraw.ts'
 
 export let nextTurnAi: boolean = true
 export let aiTurnMoveNum: number = 0
 
 export function setNextTurnAi(value: boolean): void {
-  nextTurnAi = value;
+  nextTurnAi = value
 }
 
 export function aiMove(index: number): void {
@@ -15,7 +16,8 @@ export function aiMove(index: number): void {
 
   if (!userWinTheTure) {
     if (index >= 0) {
-      getGridElem[index].classList.add('grid__item--ai')
+      getGridElem[index].style.backgroundImage =
+        `url('${aiDrawCharacter[0].img}')`
       nextTurnAi = !nextTurnAi
       setNextTurnUser(false)
       aiTurnMoveNum++

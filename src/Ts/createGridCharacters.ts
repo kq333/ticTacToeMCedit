@@ -11,6 +11,15 @@ export function createGridCharacters() {
   }
 
   const containerElem = document.createElement('div')
+  const createHeader = document.createElement('header')
+  createHeader.classList.add('grid-characters__header')
+  const createH2 = document.createElement('h2')
+  createH2.classList.add('grid-characters__text')
+  createH2.textContent = 'Choose a character'
+
+  getElem.appendChild(createHeader)
+  createHeader.appendChild(createH2)
+
   containerElem.classList.add('grid-characters__container')
 
   charactersImage.forEach((elem: CharacterImage) => {
@@ -33,6 +42,6 @@ export function createGridCharacters() {
   })
 
   getElem.appendChild(containerElem)
-  
+
   choosenCharacter()
 }

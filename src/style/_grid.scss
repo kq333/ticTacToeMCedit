@@ -24,11 +24,7 @@ h1 {
     grid-template-columns: repeat(3, auto);
     grid-template-rows: minmax(200px);
     gap: 10px;
-    display: none;
 
-    &--isActive {
-        display: block;
-    }
 
     &__item {
         max-width: 200px;
@@ -36,16 +32,13 @@ h1 {
         height: 200px;
         border: 1px solid black;
 
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+
         &:hover {
             cursor: pointer;
         }
 
-        &--user {
-            background-color: red;
-        }
-
-        &--ai {
-            background-color: yellowgreen;
-        }
     }
 }

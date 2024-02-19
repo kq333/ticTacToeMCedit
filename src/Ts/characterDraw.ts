@@ -12,12 +12,12 @@ export function characterDraw(userCharacter: string | null): void {
   for (let i = 0; i < charactersImage.length; i++) {
     const character: CharacterImage = charactersImage[i]
     if (character.name === userCharacter) {
-        userChoosenCharacter.push(character)
+      userChoosenCharacter.push(character)
       userCharacterId = character.id
     }
   }
 
-  const randomNum: number = Math.floor(Math.random() * 7)
+  const randomNum: number = Math.floor(Math.random() * charactersImage.length)
 
   if (randomNum !== userCharacterId) {
     aiDrawCharacter.push(charactersImage[randomNum])

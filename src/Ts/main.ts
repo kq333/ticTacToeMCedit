@@ -1,5 +1,3 @@
-import { createGrid } from './createGrid.ts'
-import { userMove } from './userMove.ts'
+import { createGridCharacters } from './createGridCharacters.ts'
 
-createGrid()
-userMove()
+createGridCharacters()

@@ -1,5 +1,6 @@
 import { CharacterImage } from '../types/characterImage'
 import { charactersImage } from './charactersImage'
+import { choosenCharacter } from './choosenCharacter'
 
 export function createGridCharacters() {
   const getElem: HTMLElement | null = document.querySelector('.grid-characters')
@@ -32,4 +33,6 @@ export function createGridCharacters() {
   })
 
   getElem.appendChild(containerElem)
+  
+  choosenCharacter()
 }

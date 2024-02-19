@@ -3,13 +3,14 @@ import { CharacterImage } from '../types/characterImage'
 
 export const charactersPlayingGame: CharacterImage[] = []
 
-export function characterDraw(userCharacter: string | null) {
+export function characterDraw(userCharacter: string | null): void {
   let userCharacterId: number | undefined = undefined
 
   for (let i = 0; i < charactersImage.length; i++) {
-    if (charactersImage[i].name === userCharacter) {
-      charactersPlayingGame.push(charactersImage[i])
-      userCharacterId = charactersImage[i].id
+    const character: CharacterImage = charactersImage[i]
+    if (character.name === userCharacter) {
+      charactersPlayingGame.push(character)
+      userCharacterId = character.id
     }
   }
 

@@ -1,13 +1,13 @@
 .grid-characters {
-    max-width: 830px;
+    max-width: 530px;
     width: 100%;
     height: 630px;
 
     &__container {
         display: grid;
         grid-template-columns: repeat(3, auto);
-        justify-content: center;
-        gap: 20px;
+        justify-content: space-evenly;
+        row-gap: 15px;
     }
 
     &__item {
@@ -17,13 +17,13 @@
         border: 1px solid black;
         border-radius: 4px;
         padding: 10px 5px;
+        background-color: antiquewhite;
 
         transition: transform 0.3s ease;
 
         &:hover {
-            transform: scale(1.2);
+            transform: scale(1.5);
             cursor: pointer;
-            opacity: 0.7;
         }
     }
 
@@ -36,5 +36,8 @@
 
     &__name {
         text-align: center;
+        padding: 5px 0 0 0;
+        font-weight: 700;
+        font-size: large;
     }
 }

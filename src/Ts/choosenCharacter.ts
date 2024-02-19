@@ -5,10 +5,15 @@ export function choosenCharacter(): void {
     '.grid-characters__item',
   )
 
-  if (!getElem || getElem.length === 0) {
+  const getGridCharacters: HTMLElement | null =
+    document.querySelector('.grid-characters')
+
+  if (!getElem || (getElem.length === 0 && !getGridCharacters)) {
     console.log('There are no elements with class "grid-characters__item"')
     return
   }
+
+  const removeElem = (): void => getGridCharacters?.remove()
 
   getElem.forEach((elem: Element): void => {
     elem.addEventListener('click', () => {
@@ -18,6 +23,7 @@ export function choosenCharacter(): void {
 
       if (nameElem) {
         characterDraw(nameElem.textContent)
+        removeElem()
       }
     })
   })

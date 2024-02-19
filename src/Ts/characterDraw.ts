@@ -1,7 +1,10 @@
 import { charactersImage } from './charactersImage'
 import { CharacterImage } from '../types/characterImage'
+import { createGrid } from './createGrid.ts'
+import { userMove } from './userMove.ts'
 
-export const charactersPlayingGame: CharacterImage[] = []
+export const userChoosenCharacter: CharacterImage[] = []
+export const aiDrawCharacter: CharacterImage[] = []
 
 export function characterDraw(userCharacter: string | null): void {
   let userCharacterId: number | undefined = undefined
@@ -9,7 +12,7 @@ export function characterDraw(userCharacter: string | null): void {
   for (let i = 0; i < charactersImage.length; i++) {
     const character: CharacterImage = charactersImage[i]
     if (character.name === userCharacter) {
-      charactersPlayingGame.push(character)
+        userChoosenCharacter.push(character)
       userCharacterId = character.id
     }
   }
@@ -17,6 +20,9 @@ export function characterDraw(userCharacter: string | null): void {
   const randomNum: number = Math.floor(Math.random() * 7)
 
   if (randomNum !== userCharacterId) {
-    charactersPlayingGame.push(charactersImage[randomNum])
+    aiDrawCharacter.push(charactersImage[randomNum])
   }
+
+  createGrid()
+  userMove()
 }

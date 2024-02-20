@@ -1,6 +1,7 @@
 .grid-characters {
     max-width: 730px;
     width: 100%;
+    margin-top: 30px;
 
     &__header {
         text-align: center;
@@ -10,13 +11,22 @@
     &__text {
         font-weight: 700;
         font-size: 32px;
-        letter-spacing: 1.5px;
+        letter-spacing: 4px;
+        color: #fefce8;
+
+        -webkit-text-stroke: 1.5px #000000;
+        text-stroke: 1.5px #000000;
     }
 
     &__container {
         display: flex;
+        justify-content: space-between;
         flex-wrap: wrap;
         gap: 20px;
+
+        @media (max-width: 768px) {
+            justify-content: center;
+        }
     }
 
     &__item {
@@ -26,13 +36,18 @@
         border: 1px solid black;
         border-radius: 4px;
         padding: 10px 5px;
-        background-color: antiquewhite;
+
+        background-color: #ffffff80;
+        backdrop-filter: blur(10px);
+        border-radius: 10px;
+        box-shadow: 0 0 10px #00000033;
 
         transition: transform 0.3s ease;
 
         &:hover {
             transform: scale(1.5);
             cursor: pointer;
+            z-index: 1;
         }
     }
 
@@ -48,5 +63,6 @@
         padding: 5px 0 0 0;
         font-weight: 700;
         font-size: large;
+        color: #374151;
     }
 }

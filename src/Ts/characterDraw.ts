@@ -2,6 +2,7 @@ import { charactersImage } from './charactersImage'
 import { CharacterImage } from '../types/characterImage'
 import { createGrid } from './createGrid.ts'
 import { userMove } from './userMove.ts'
+import { oponentsCharacters } from './oponentsCharacters'
 
 export const userChoosenCharacter: CharacterImage[] = []
 export const aiDrawCharacter: CharacterImage[] = []
@@ -35,4 +36,8 @@ export function characterDraw(userCharacter: string | null): void {
 
   createGrid()
   userMove()
+
+  if (userChoosenCharacter.length > 0 && aiDrawCharacter.length > 0) {
+    oponentsCharacters(userChoosenCharacter, aiDrawCharacter)
+  }
 }

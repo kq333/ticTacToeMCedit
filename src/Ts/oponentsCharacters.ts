@@ -8,7 +8,9 @@ export function oponentsCharacters(
 
   console.log(opponentsArray)
 
-  const getElem: HTMLElement | null = document.querySelector('.section__container')
+  const getElem: HTMLElement | null = document.querySelector(
+    '.section__container',
+  )
   const createElem = document.createElement('div')
   createElem.classList.add('card-opponents')
   getElem?.appendChild(createElem)
@@ -18,8 +20,9 @@ export function oponentsCharacters(
   createElemDiv.classList.add('card-opponents__container')
   getElemParent?.appendChild(createElemDiv)
 
-  const getCardElem: HTMLElement | null =
-    document.querySelector('.card-opponents__container')
+  const getCardElem: HTMLElement | null = document.querySelector(
+    '.card-opponents__container',
+  )
 
   if (getCardElem !== null) {
     const htmlElements = opponentsArray.map(

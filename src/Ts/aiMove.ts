@@ -18,6 +18,7 @@ export function aiMove(index: number): void {
     if (index >= 0) {
       getGridElem[index].style.backgroundImage =
         `url('${aiDrawCharacter[0].img}')`
+        getGridElem[index].classList.add('grid__item--isActive')
       nextTurnAi = !nextTurnAi
       setNextTurnUser(false)
       aiTurnMoveNum++

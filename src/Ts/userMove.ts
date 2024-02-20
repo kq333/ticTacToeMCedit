@@ -21,6 +21,7 @@ export function userMove(): void {
       elem.addEventListener('click', () => {
         if (!userMoves.includes(idx) && nextTurnAi) {
           elem.style.backgroundImage = `url('${userChoosenCharacter[0].img}')`
+          elem.classList.add('grid__item--isActive')
           userMoves.push(idx)
           userTurnNum++
           nextTurnUser = !nextTurnUser

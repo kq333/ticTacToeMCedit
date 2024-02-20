@@ -29,7 +29,6 @@ export function createGridCharacters() {
     const imgElem = document.createElement('img')
     imgElem.classList.add('grid-characters__img')
     imgElem.src = elem.img
-    imgElem.loading = 'lazy'
     imgElem.alt = elem.name
 
     const nameElem = document.createElement('p')

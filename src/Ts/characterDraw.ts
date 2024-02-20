@@ -17,10 +17,20 @@ export function characterDraw(userCharacter: string | null): void {
     }
   }
 
-  const randomNum: number = Math.floor(Math.random() * charactersImage.length)
+  function randomNum(): number {
+    return Math.floor(Math.random() * charactersImage.length)
+  }
 
-  if (randomNum !== userCharacterId) {
-    aiDrawCharacter.push(charactersImage[randomNum])
+  const randomIndex = randomNum()
+
+  if (randomIndex !== userCharacterId) {
+    aiDrawCharacter.push(charactersImage[randomIndex])
+  } else {
+    let newIndex
+    do {
+      newIndex = randomNum()
+    } while (newIndex === userCharacterId)
+    aiDrawCharacter.push(charactersImage[newIndex])
   }
 
   createGrid()

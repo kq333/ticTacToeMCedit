@@ -2,8 +2,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100vh;
+
+    margin-top: 30px;
 }
 
 h1 {
@@ -17,7 +17,8 @@ h1 {
     max-width: 630px;
     width: 100%;
     height: 630px;
-    border: 1px solid black;
+    border: 1px solid #52525b;
+    border-radius: 10px;
     padding: 2%;
 
     display: grid;
@@ -29,11 +30,28 @@ h1 {
         max-width: 200px;
         width: 100%;
         height: 200px;
-        border: 1px solid black;
+        border: 1px solid #52525b;
+        border-radius: 10px;
 
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
+
+        &--isActive {
+            max-width: 200px;
+            width: 100%;
+            height: 200px;
+            border: 1px solid #52525b;
+
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+
+            background-color: #ffffff80;
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            box-shadow: 0 0 10px #00000033;
+        }
 
         &:hover {
             cursor: pointer;

@@ -1,0 +1,29 @@
+.winner-board {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+
+    background-color: black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__btn-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    &__btn {
+        background-color: #4b5563;
+        padding: 8px 20px;
+        border-radius: 8px;
+        border: 1px solid #4b5563;
+
+        &:hover {
+            cursor: pointer;
+            opacity: 0.4;
+        }
+    }
+}

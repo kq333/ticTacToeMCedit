@@ -9,28 +9,14 @@
     background-repeat: no-repeat;
     background-position: center;
 
-    @media (max-width: 768px) {
-
-        &::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-    }
-
     &__header-text {
         color: #450a0a;
         text-wrap: balance;
 
         @media (max-width: 768px) {
             font-size: 24px;
-            color:  lighten(#450a0a, 45%);;
+            color: lighten(#450a0a, 45%);
         }
-
     }
 
     &__container {

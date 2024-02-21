@@ -1,9 +1,103 @@
-.section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.card-opponents {
+  max-width: 660px;
   width: 100%;
-  height: 100vh;
+  height: 100px;
+  grid-row: 1/2;
+  margin: auto;
+}
+.card-opponents__container {
+  display: flex;
+  justify-content: space-around;
+  height: 70px;
+  padding-top: 10px;
+}
+.card-opponents__text {
+  color: rgba(218, 29, 225, 0.9921568627);
+  text-align: center;
+  padding-bottom: 5px;
+}
+.card-opponents__item {
+  background-color: rgba(255, 255, 255, 0.231372549);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  height: 110px;
+  width: 100px;
+  padding: 1px 0 0;
+}
+.card-opponents__img {
+  max-width: 100px;
+  width: 100%;
+  height: 70px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.grid-characters {
+  max-width: 770px;
+  width: 100%;
+  margin-top: 30px;
+}
+.grid-characters__header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.grid-characters__text {
+  font-weight: 700;
+  font-size: 32px;
+  letter-spacing: 4px;
+  color: rgba(254, 237, 232, 0.4666666667);
+}
+.grid-characters__container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+@media (max-width: 768px) {
+  .grid-characters__container {
+    justify-content: center;
+  }
+}
+.grid-characters__item {
+  max-width: 200px;
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 10px 5px;
+  background-color: rgba(255, 255, 255, 0.5019607843);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+.grid-characters__item:hover {
+  transform: scale(1.5);
+  cursor: pointer;
+  z-index: 1;
+}
+.grid-characters__img {
+  height: 90px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  padding-left: 1%;
+  width: 100%;
+}
+.grid-characters__name {
+  text-align: center;
+  padding: 5px 0 0 0;
+  font-weight: 700;
+  font-size: large;
+  color: #374151;
+}
+
+.section {
+  margin: auto;
+}
+.section__container {
+  display: grid;
 }
 
 h1 {
@@ -14,67 +108,162 @@ h1 {
 }
 
 .grid {
-  max-width: 630px;
-  width: 100%;
-  height: 630px;
-  border: 1px solid black;
-  padding: 2%;
+  margin-top: 40px;
+}
+.grid__container {
+  border: 1px solid #52525b;
+  border-radius: 10px;
+  padding: 2% 2%;
   display: grid;
   grid-template-columns: repeat(3, auto);
-  grid-template-rows: minmax(200px);
   gap: 10px;
-  display: none;
-}
-.grid--isActive {
-  display: block;
+  max-width: 500px;
+  width: 100%;
+  margin: auto;
 }
 .grid__item {
-  max-width: 200px;
+  max-width: 150px;
   width: 100%;
-  height: 200px;
-  border: 1px solid black;
+  height: 150px;
+  border: 1px solid #52525b;
+  border-radius: 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.grid__item--winning-item {
+  max-width: 150px;
+  width: 100%;
+  height: 150px;
+  background-color: #7f1d1d;
+}
+.grid__item--isActive {
+  max-width: 150px;
+  width: 100%;
+  height: 150px;
+  border: 1px solid transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: rgba(255, 255, 255, 0.5019607843);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 .grid__item:hover {
   cursor: pointer;
-}
-.grid__item--user {
-  background-color: red;
-}
-.grid__item--ai {
-  background-color: yellowgreen;
+  border: 1px solid #ffffff;
 }
 
-.grid-characters {
-  max-width: 830px;
+.page {
   width: 100%;
-  height: 630px;
+  height: 100vh;
+  overflow-y: auto;
+  background-image: url(../assets/MkWallpaper.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
-.grid-characters__container {
-  display: grid;
-  grid-template-columns: repeat(3, auto);
+@media (max-width: 768px) {
+  .page::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+.page__header-text {
+  color: #450a0a;
+  text-wrap: balance;
+}
+@media (max-width: 768px) {
+  .page__header-text {
+    font-size: 24px;
+    color: #e54f4f;
+  }
+}
+.page__container {
+  margin: auto;
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.winner-board {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: black;
+  display: flex;
   justify-content: center;
-  gap: 20px;
+  align-items: center;
 }
-.grid-characters__item {
-  max-width: 250px;
-  width: 100%;
-  border: 1px solid black;
-  border-radius: 4px;
-  padding: 10px 5px;
-  transition: transform 0.3s ease;
+.winner-board__btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
-.grid-characters__item:hover {
-  transform: scale(1.2);
+.winner-board__btn {
+  background-color: #4b5563;
+  padding: 8px 20px;
+  border-radius: 8px;
+  border: 1px solid #4b5563;
+}
+.winner-board__btn:hover {
   cursor: pointer;
-  opacity: 0.7;
+  opacity: 0.4;
 }
-.grid-characters__img {
-  max-width: 90px;
-  height: 90px;
-  -o-object-fit: contain;
-     object-fit: contain;
-  width: 100%;
+
+.intro-block {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: black;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.grid-characters__name {
-  text-align: center;
+.intro-block__btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.intro-block__btn-reload {
+  background-color: #737373;
+  padding: 8px 20px;
+  border-radius: 8px;
+  border: 1px solid #737373;
+}
+.intro-block__btn-reload:hover {
+  cursor: pointer;
+  opacity: 0.4;
+}
+
+.ture-info {
+  overflow: hidden;
+}
+.ture-info__container {
+  width: 100vw;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ture-info__text {
+  font-size: 74px;
+  letter-spacing: 8px;
+  color: #e8eaee;
+}
+
+@font-face {
+  font-family: "mk2";
+  src: url("../fonts/mk2.ttf") format("truetype");
+}
+body {
+  font-family: "mk2", sans-serif;
 }/*# sourceMappingURL=style.css.map */

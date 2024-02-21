@@ -1,7 +1,10 @@
-@import './card-opponent.scss';
-@import './grid-characters.scss';
-@import './grid.scss';
+@import './card-opponent';
+@import './grid-characters';
+@import './grid';
 @import './page.scss';
+@import './winner-board';
+@import './gameStater';
+@import './tieFunction';
 
 @font-face {
     font-family: 'mk2';

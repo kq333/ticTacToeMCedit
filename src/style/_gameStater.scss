@@ -1,0 +1,31 @@
+.intro-block {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: black;
+
+    position: absolute;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__btn-container {
+        display: flex;
+        justify-content: center;
+
+        margin-top: 20px;
+    }
+
+    &__btn-reload {
+        background-color: #737373;
+        padding: 8px 20px;
+        border-radius: 8px;
+        border: 1px solid #737373;
+
+        &:hover {
+            cursor: pointer;
+            opacity: 0.4;
+        }
+    }
+}

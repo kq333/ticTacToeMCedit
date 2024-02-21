@@ -1,3 +1,3 @@
-import { createGridCharacters } from './createGridCharacters.ts'
+import { gameStarter } from './gameStarter.ts'
 
-createGridCharacters()
+gameStarter()

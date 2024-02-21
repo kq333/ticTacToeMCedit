@@ -45,10 +45,8 @@ export function isAiWin(): void {
           }
 
           setTimeout(() => {
-
             endGameBoard()
-
-          },2000)
+          }, 1500)
         })
         break
       }

@@ -2,6 +2,9 @@ import { gameEngine } from './gameEngine.ts'
 import { aiMove, nextTurnAi, setNextTurnAi, aiTurnMoveNum } from './aiMove.ts'
 import { nextTurnUser, setNextTurnUser, userTurnNum } from './userMove.ts'
 import { copyWinningConditions } from './gameEngine.ts'
+import { aiWinTheTure } from './isAiWin.ts'
+import { userWinTheTure } from './isUserWin.ts'
+import { tieFunction } from './tieFunction.ts'
 
 export let aiPrevMoves: number[] = []
 
@@ -44,7 +47,9 @@ export function aiNextMove(): void {
     } else {
       aiNextMove()
     }
-  } else {
-    console.log('duce')
+  }
+
+  if (!sumGameTurnsNum && !aiWinTheTure && !userWinTheTure) {
+    tieFunction()
   }
 }

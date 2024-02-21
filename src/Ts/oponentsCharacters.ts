@@ -6,8 +6,6 @@ export function oponentsCharacters(
 ): void {
   const opponentsArray = [...userChoosenCharacter, ...aiDrawCharacter]
 
-  console.log(opponentsArray)
-
   const getElem: HTMLElement | null = document.querySelector(
     '.section__container',
   )

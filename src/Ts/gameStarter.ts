@@ -1,4 +1,5 @@
 import { createGridCharacters } from './createGridCharacters.ts'
+import imgStarter from '../assets/start-gif.gif'
 
 export function gameStarter() {
   const getParentElem: HTMLElement | null = document.querySelector('.page')
@@ -6,7 +7,7 @@ export function gameStarter() {
   const introElem = `
     <div class="intro-block">
         <div class="intro-block__container">
-            <img src="/src/assets/start-gif.gif" alt="fighter gif">
+            <img src="${imgStarter}" alt="fighter gif">
             <div class="intro-block__btn-container">
               <button class="intro-block__btn-reload">Play</button>
             </div>

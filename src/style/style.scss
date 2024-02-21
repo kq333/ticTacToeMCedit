@@ -1,2 +1,13 @@
-@import './gride.scss';
+@import './card-opponent.scss';
 @import './grid-characters.scss';
+@import './grid.scss';
+@import './page.scss';
+
+@font-face {
+    font-family: 'mk2';
+    src: url('../fonts/mk2.ttf') format('truetype');
+}
+
+body {
+    font-family: 'mk2', sans-serif;
+}

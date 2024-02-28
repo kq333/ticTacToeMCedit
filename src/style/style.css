@@ -35,7 +35,7 @@
 }
 
 .grid-characters {
-  max-width: 770px;
+  max-width: 850px;
   width: 100%;
   margin-top: 30px;
 }
@@ -172,6 +172,7 @@ h1 {
 @media (max-width: 768px) {
   .page__header-text {
     font-size: 24px;
+    color: #e54f4f;
   }
 }
 .page__container {
@@ -230,6 +231,11 @@ h1 {
 .intro-block__btn-reload:hover {
   cursor: pointer;
   opacity: 0.4;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
 
 .ture-info {

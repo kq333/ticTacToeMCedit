@@ -5,6 +5,10 @@ Mortal Kombat Tic Tac Toe is a fun twist on the classic game, infused with chara
 [DEMO](https://65d645913ca36cedbb0d9abd--sage-kleicha-13ca96.netlify.app)
 
 
+## AI Gameplay
+In Mortal Kombat Tic Tac Toe, players have the option to challenge an AI opponent, making strategic moves against characters from the Mortal Kombat universe. The AI is designed to provide a challenging and engaging gameplay experience. Players can test their skills against the AI and enjoy the thrill of battle in the ultimate Tic Tac Toe showdown.
+
+
 Installation
 Clone the repository to your local machine.
 

@@ -22,7 +22,11 @@ export function aiMove(index: number): void {
       nextTurnAi = !nextTurnAi
       setNextTurnUser(false)
       aiTurnMoveNum++
-      isAiWin()
+      isAiWin();
+      
+      getGridElem.forEach((elem: HTMLElement) => {
+        elem.style.pointerEvents = "auto";
+      });
     }
   }
 }

@@ -3,6 +3,7 @@ import { nextTurnAi } from './aiMove.ts'
 import { isUserWin } from './isUserWin.ts'
 import { aiWinTheTure } from './isAiWin.ts'
 import { userChoosenCharacter } from './characterDraw.ts'
+import { aiPrevMoves } from './aiNextMove.ts'
 
 export let userMoves: number[] = []
 export let userTurnNum: number = 0
@@ -19,7 +20,7 @@ export function userMove(): void {
 
     getGridElem.forEach((elem: HTMLElement, idx: number) => {
       elem.addEventListener('click', () => {
-        if (!userMoves.includes(idx) && nextTurnAi) {
+        if (!userMoves.includes(idx) && nextTurnAi && !aiPrevMoves.includes(idx)) {
           elem.style.backgroundImage = `url('${userChoosenCharacter[0].img}')`
           elem.classList.add('grid__item--isActive')
           userMoves.push(idx)

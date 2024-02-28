@@ -27,6 +27,9 @@ export function userMove(): void {
           nextTurnUser = !nextTurnUser
           isUserWin()
           aiNextMove()
+          getGridElem.forEach((elem: HTMLElement) => {
+            elem.style.pointerEvents = "none";
+          });
         }
       })
     })

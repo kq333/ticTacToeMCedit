@@ -2,6 +2,7 @@ import { userWinTheTure } from './isUserWin'
 import { userChoosenCharacter } from './characterDraw'
 import { aiDrawCharacter } from './characterDraw'
 import { CharacterImage } from '../types/characterImage'
+import fatality from '../assets/fatality.mp3'
 
 export function endGameBoard(): void {
   const getGridElem: HTMLElement | null = document.querySelector('.grid')
@@ -38,6 +39,11 @@ export function endGameBoard(): void {
     } else {
       getContainer.innerHTML = htmlElement(aiDrawCharacter)
     }
+
+    setTimeout(() => {
+      const audio = new Audio(fatality)
+      audio.play()
+    }, 500)
   }
 
   const getWinnerElem: HTMLElement | null =

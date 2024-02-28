@@ -2,7 +2,7 @@
 
 Mortal Kombat Tic Tac Toe is a fun twist on the classic game, infused with characters from the iconic Mortal Kombat universe.
 
-[DEMO](https://65df1daec90f3114453209df--leafy-florentine-31992f.netlify.app)
+[DEMO](https://65df2200f94f071831ef3f7f--mellifluous-marigold-851c21.netlify.app)
 
 
 ## AI Gameplay
